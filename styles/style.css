@@ -1,0 +1,269 @@
+/* style.css */
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    padding: 2rem;
+}
+
+header h1 {
+    color: #4a4a4a;
+    font-size: 4rem;
+    line-height: 1.2;
+    margin-bottom: 0;
+}
+
+header p {
+    color: #7b7b7b;
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
+/* Increase the size of the social media icons */
+.social-icons a i {
+    font-size: 24px;
+    /* Adjust the size as needed */
+}
+
+main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+section h2 {
+    color: #4a4a4a;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: transparent;
+    backdrop-filter: saturate(180%) blur(20px);
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+li {
+    margin: 0 0.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    opacity: 0.6;
+}
+
+a:hover {
+    opacity: 1;
+}
+
+.section {
+    padding: 2rem;
+    border-radius: 5px;
+    margin: 2rem 0;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.project-card {
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-card h3 {
+    color: #4a4a4a;
+    font-size: 1.5rem;
+    margin-top: 0;
+    padding: 1rem;
+}
+
+.project-card p {
+    color: #7b7b7b;
+    font-size: 1.2rem;
+    padding: 0 1rem 1rem;
+}
+
+.skill-item {
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.skill-item i {
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+
+.skill-name {
+    color: #4a4a4a;
+    font-size: 1.2rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f5f5f5;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-picture,
+    .header h1 {
+        margin-bottom: 10px;
+        /* Adjust spacing for smaller screens */
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+}
+
+.animate {
+    transition: transform 0.3s ease;
+    /* Animation duration and easing */
+}
+
+.animate:hover {
+    transform: translateY(-5px);
+    /* Move up by 5 pixels on hover */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    /* Shadow effect */
+}
+
+.contact-section {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f5f5f5;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-bottom: 1rem;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #3e8e41;
+}
+
+/* Ensure the back-to-top link is initially hidden */
+.d-none {
+    display: none;
+}
+
+/* Style the back-to-top link */
+/* Style the back-to-top link */
+#back-to-top {
+    position: fixed;
+    /* Fixed position to stay in place even when scrolling */
+    bottom: 20px;
+    /* Position at the bottom of the screen */
+    right: 20px;
+    /* Position to the right of the screen */
+    z-index: 100;
+    /* Ensure it's above other content */
+    background-color: #4CAF50;
+    /* Background color */
+    color: white;
+    /* Text color */
+    padding: 10px 20px;
+    /* Padding for better clickability */
+    text-decoration: none;
+    /* Remove underline */
+    border-radius: 8px;
+    /* Rounded corners for a rounded square effect */
+    cursor: pointer;
+    /* Change cursor to pointer on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth transition for hover effect */
+    transform: scale(0.8);
+    /* Initial scale to make it smaller */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow for elevation */
+}
+
+/* Hover effect for the back-to-top link */
+#back-to-top:hover {
+    background-color: #3e8e41;
+    /* Darker shade of the background color on hover */
+    transform: scale(1);
+    /* Scale up on hover for a subtle effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    /* Increase shadow on hover for more elevation */
+}
+
+/* Ensure the icon inside the link is centered */
+#back-to-top i {
+    vertical-align: middle;
+}

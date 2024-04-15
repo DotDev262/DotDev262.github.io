@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>My Portfolio</title>
+</head>
+
+<body>
+    <header class="animate">
+        <nav class="navigation">
+            <ul class="navbar">
+                <li><a href="#"><i class="fas fa-home"></i></a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <figure class="profile-picture">
+            <img src="assets/images/Profile picture.png" alt="Profile Picture" width="70" height="70">
+        </figure>
+        <h1>John Doe</h1>
+        <p>Computer Science Student</p>
+        <!-- Add GitHub and LinkedIn icons -->
+        <div class="social-icons">
+            <div class="social-icons">
+                <a href="https://github.com/DotDev262" target="_blank" aria-label="GitHub"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/yourlinkedinprofile" target="_blank" aria-label="LinkedIn"><i
+                        class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </header>
+    <a href="#" id="back-to-top" class="btn btn-primary d-none" aria-label="Go to top"><i
+            class="fas fa-arrow-up"></i></a>
+    <main>
+        <section id="about" class="animate section">
+            <h2>About Me</h2>
+            <p>Insert information about yourself here.</p>
+        </section>
+        <section id="skills" class="animate section">
+            <h2>Skills</h2>
+            <div class="skills-category">
+                <h3>Programming Languages</h3>
+                <div class="skill-item animate">
+                    <i class="fab fa-python"></i> Python
+                </div>
+                <div class="skill-item animate">
+                    <i class="fab fa-java"></i> Java
+                </div>
+                <div class="skill-item animate">
+                    <i class="fab fa-js-square"></i> JavaScript
+                </div>
+            </div>
+            <div class="skills-category">
+                <h3>Technologies Known</h3>
+                <div class="skill-item animate">
+                    <i class="fab fa-linux"></i> Linux
+                </div>
+                <div class="skill-item animate">
+                    <i class="fab fa-docker"></i> Docker
+                </div>
+                <div class="skill-item animate">
+                    <i class="fab fa-git"></i> Git
+                </div>
+            </div>
+        </section>
+        <section id="projects" class="animate section">
+            <h2>Projects</h2>
+            <div class="project-container"></div>
+        </section>
+        <section id="contact" class="animate section contact-section">
+            <h2>Contact Me</h2>
+            <form action="/submit_form" method="post" class="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required />
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" required />
+
+                <label for="message">Message:</label>
+                <textarea id="message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        &copy; John Doe 2023
+    </footer>
+    <script>
+        const projects = [
+            {
+                title: 'Project One',
+                description:
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo odio et orci euismod.',
+                imageUrl: 'https://source.unsplash.com/random/300x200?sig=1',
+            },
+            // More projects...
+        ];
+
+        function createProjectCard(project) {
+            const card = document.createElement('div');
+            card.classList.add('project-card');
+
+            const img = document.createElement('img');
+            img.src = project.imageUrl;
+            card.appendChild(img);
+
+            const info = document.createElement('div');
+            info.innerHTML = `
+        <h3>${project.title}</h3>
+        <p>${project.description}</p>
+    `;
+            card.appendChild(info);
+
+            return card;
+        }
+
+        const projectSection = document.getElementById('projects');
+        for (let i = 0; i < projects.length; i++) {
+            const projectCard = createProjectCard(projects[i]);
+            projectSection.appendChild(projectCard);
+        }
+
+        // Function to toggle the visibility of the back-to-top link
+        function toggleBackToTop() {
+            const backToTop = document.getElementById('back-to-top');
+            if (window.pageYOffset > 200) { // Show the link if scrolled more than 200px
+                backToTop.classList.remove('d-none'); // Assuming 'd-none' is the class that hides the element
+            } else {
+                backToTop.classList.add('d-none'); // Hide the link if scrolled less than or equal to 200px
+            }
+        }
+
+        // Event listener for the scroll event
+        window.addEventListener('scroll', toggleBackToTop);
+
+        // Initial call to set the correct visibility state
+        toggleBackToTop();
+
+        // Back-to-top anchor functionality
+        document.getElementById('back-to-top').addEventListener('click', function (event) {
+            event.preventDefault(); // Prevent the default action to stop the page from jumping
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+
+</html>
