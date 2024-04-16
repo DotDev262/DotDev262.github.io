@@ -1,3 +1,16 @@
+:root {
+    --background-color: #232A2E;
+    --nav-background-color: #3D484D;
+    --home-background-color: #475258;
+    --card-background-color: #2D353B;
+    --text-input-background-color: #343F44;
+    --skill-item-background-color: #425047;
+    --text-color: #D3C6AA;
+    --sub-text-color: #7A8478;
+    --accent-color: #9DA9A0;
+    --accent-color-active: #A7C080
+}
+
 * {
     box-sizing: border-box;
     scroll-behavior: smooth
@@ -10,7 +23,7 @@ body {
 }
 
 header {
-    background-color: #f5f5f5;
+    background-color: var(--home-background-color);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,19 +34,20 @@ header {
 }
 
 header h1 {
-    color: #4a4a4a;
+    color: var(--text-color);
     font-size: 4rem;
     line-height: 1.2;
     margin-bottom: 0
 }
 
 header p {
-    color: #7b7b7b;
+    color: var(--sub-text-color);
     font-size: 1.5rem;
     margin-top: 0
 }
 
 .social-icons a i {
+    color: var(--text-color);
     font-size: 24px
 }
 
@@ -48,7 +62,7 @@ section {
 }
 
 section h2 {
-    color: #4a4a4a;
+    color: var(--text-color);
     font-size: 2.5rem;
     margin-bottom: 1rem
 }
@@ -59,7 +73,7 @@ nav {
     left: 0;
     right: 0;
     z-index: 100;
-    background-color: transparent;
+    background-color: var(--nav-background-color);
     backdrop-filter: saturate(180%) blur(20px)
 }
 
@@ -77,7 +91,7 @@ li {
 
 a {
     text-decoration: none;
-    color: inherit;
+    color: var(--text-color);
     opacity: .6
 }
 
@@ -89,12 +103,13 @@ a:hover {
     padding: 2rem;
     border-radius: 5px;
     margin: 2rem 0;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, .1)
+    background-color: var(--card-background-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+    color: var(--sub-text-color)
 }
 
 .project-card {
-    background-color: #fff;
+    background-color: var(--nav-background-color);
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
     display: flex;
@@ -109,20 +124,21 @@ a:hover {
 }
 
 .project-card h3 {
-    color: #4a4a4a;
+    color: var(--text-color);
     font-size: 1.5rem;
     margin-top: 0;
     padding: 1rem
 }
 
 .project-card p {
-    color: #7b7b7b;
+    color: var(--sub-text-color);
     font-size: 1.2rem;
     padding: 0 1rem 1rem
 }
 
 .skill-item {
-    background-color: #f5f5f5;
+    background-color: var(--text-input-background-color);
+    color: var(--text-color);
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
     display: flex;
@@ -138,14 +154,14 @@ a:hover {
 }
 
 .skill-name {
-    color: #4a4a4a;
     font-size: 1.2rem
 }
 
 footer {
     text-align: center;
     padding: 1rem;
-    background-color: #f5f5f5
+    background-color: var(--nav-background-color);
+    color: var(--text-color)
 }
 
 @media screen and (max-width:768px) {
@@ -176,7 +192,7 @@ footer {
 .contact-section {
     text-align: center;
     padding: 2rem;
-    background-color: #f5f5f5
+    background-color: var(--card-background-color)
 }
 
 .contact-form label {
@@ -186,10 +202,12 @@ footer {
 
 .contact-form input,
 .contact-form textarea {
+    background-color: var(--text-input-background-color);
+    color: var(--text-color);
     width: 100%;
     padding: .5rem;
     border-radius: 4px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--accent-color-active);
     margin-bottom: 1rem
 }
 
@@ -198,7 +216,7 @@ footer {
 }
 
 .contact-form button {
-    background-color: #4caf50;
+    background-color: var(--accent-color);
     color: #fff;
     padding: .5rem 1rem;
     border: none;
@@ -207,7 +225,7 @@ footer {
 }
 
 .contact-form button:hover {
-    background-color: #3e8e41
+    background-color: var(--accent-color-active)
 }
 
 .d-none {
@@ -219,8 +237,8 @@ footer {
     bottom: 20px;
     right: 20px;
     z-index: 100;
-    background-color: #4caf50;
-    color: #fff;
+    background-color: var(--accent-color);
+    color: var(--text-color);
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 8px;
@@ -231,7 +249,7 @@ footer {
 }
 
 #back-to-top:hover {
-    background-color: #3e8e41;
+    background-color: var(--accent-color-active);
     transform: scale(1);
     box-shadow: 0 4px 8px rgba(0, 0, 0, .4)
 }
