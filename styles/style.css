@@ -51,7 +51,8 @@ header p {
 
 .social-icons a i {
     color: var(--text-color);
-    font-size: 24px
+    font-size: 24px;
+    padding: 1vh;
 }
 
 main {
@@ -100,6 +101,10 @@ a {
 
 a:hover {
     opacity: 1
+}
+
+.profile-picture {
+    margin-top: 10vh;
 }
 
 .section {
