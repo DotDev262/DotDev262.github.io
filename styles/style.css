@@ -18,6 +18,9 @@
 
 body {
     font-family: Arial, sans-serif;
+    background-image: url(/assets/images/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     margin: 0;
     padding: 0
 }
