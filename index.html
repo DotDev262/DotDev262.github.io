@@ -25,7 +25,7 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <figure class="profile-picture">
+        <figure class="profile-picture animate">
             <img src="assets/images/profile-pic.png" alt="Profile Picture" width="250" height="250">
         </figure>
         <h1>Aryan M</h1>
@@ -44,7 +44,17 @@
     <main>
         <section id="about" class="animate section">
             <h2>About Me</h2>
-            <p>Insert information about yourself here.</p>
+            <p>Hello! I am a first-year Computer Science Engineering student at Amrita Vishwa Vidyapeetham, Chennai,
+                originally from
+                Ayyanthole, Kerala. I have a passion for programming and am proficient in Python, Java, and JavaScript.
+                When I'm not
+                immersed in coding, you can find me tinkering with devices, exploring the world of technology. I also
+                enjoy listening to
+                music and reading as hobbies. Traveling to various places and experiencing the beauty of nature is
+                something that truly
+                rejuvenates me. I am excited about my journey in the world of technology and look forward to exploring
+                new horizons in
+                the field of computer science.</p>
         </section>
         <section id="skills" class="animate section">
             <h2>Skills</h2>
@@ -75,7 +85,35 @@
         </section>
         <section id="projects" class="animate section">
             <h2>Projects</h2>
-            <div class="project-container"></div>
+            <div class="project-container">
+                <!-- Project 1 -->
+                <a href="https://github.com/Tintin2310/FusionHackz24">
+                    <div class="project-card">
+                        <img src="https://github.com/Tintin2310/FusionHackz24/blob/main/static/logo.png?raw=true"
+                            alt="Project 1 Image">
+                        <h3>EtherVault</h3>
+                        <p>Tracking Ether made simple - EtherVault<br>
+                            A webpage for tracking your Ethereum balance and its value in real world currency.
+                        </p>
+                    </div>
+                </a>
+                <br>
+                <!-- Project 2 -->
+                <a href="https://github.com/Tintin2310/HEREvolution-Codefest-BITS-Pilani">
+                    <div class="project-card">
+                        <img src="https://github.com/Tintin2310/HEREvolution-Codefest-BITS-Pilani/blob/main/Resources/logo.png?raw=true"
+                            alt="Project 2 Image">
+                        <h3>Here&There</h3>
+                        <p>A web application showcasing a platform for searching locations, viewing
+                            tourist attractions, and
+                            planning routes, utilizing geocoding, mapping technologies, and Firebase Authentication,
+                            currently with a database for
+                            Indian tourist places </p>
+                    </div>
+                </a>
+
+                <!-- Add as many project cards as needed -->
+            </div>
         </section>
         <section id="contact" class="animate section contact-section">
             <h2>Contact Me</h2>
@@ -96,40 +134,6 @@
         &copy; Aryan Madhusudhanan 2024
     </footer>
     <script>
-        const projects = [
-            {
-                title: 'Project One',
-                description:
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo odio et orci euismod.',
-                imageUrl: 'https://source.unsplash.com/random/300x200?sig=1',
-            },
-            // More projects...
-        ];
-
-        function createProjectCard(project) {
-            const card = document.createElement('div');
-            card.classList.add('project-card');
-
-            const img = document.createElement('img');
-            img.src = project.imageUrl;
-            card.appendChild(img);
-
-            const info = document.createElement('div');
-            info.innerHTML = `
-        <h3>${project.title}</h3>
-        <p>${project.description}</p>
-    `;
-            card.appendChild(info);
-
-            return card;
-        }
-
-        const projectSection = document.getElementById('projects');
-        for (let i = 0; i < projects.length; i++) {
-            const projectCard = createProjectCard(projects[i]);
-            projectSection.appendChild(projectCard);
-        }
-
         // Function to toggle the visibility of the back-to-top link
         function toggleBackToTop() {
             const backToTop = document.getElementById('back-to-top');
