@@ -4,10 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="/styles/style.css">
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -15,7 +18,9 @@
 </head>
 
 <body>
+    <!-- Header Section -->
     <header class="animate">
+        <!-- Navigation -->
         <nav class="navigation">
             <ul class="navbar">
                 <li><a href="#"><i class="fas fa-home"></i></a></li>
@@ -25,37 +30,45 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+        <!-- Profile Picture -->
         <figure class="profile-picture animate">
             <img src="assets/images/profile-pic.png" alt="Profile Picture" width="250" height="250">
         </figure>
+        <!-- Name and Rotating Text -->
         <h1>Aryan M</h1>
-        <p>Computer Science Student</p>
+        <div class="rotating-text">
+            <pre>- </pre>
+            <p>
+                <span class="word">Student</span>
+                <span class="word">Developer</span>
+                <span class="word">SysAdmin</span>
+            </p>
+        </div>
+        <!-- Social Icons -->
         <div class="social-icons">
-            <div class="social-icons">
-                <a href="https://github.com/DotDev262" target="_blank" aria-label="GitHub"><i
-                        class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/dotdev262" target="_blank" aria-label="LinkedIn"><i
-                        class="fab fa-linkedin"></i></a>
-            </div>
+            <a href="https://github.com/DotDev262" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/dotdev262" target="_blank" aria-label="LinkedIn"><i
+                    class="fab fa-linkedin"></i></a>
         </div>
     </header>
+    <!-- Back to Top Button -->
     <a href="#" id="back-to-top" class="btn btn-primary d-none" aria-label="Go to top"><i
             class="fas fa-arrow-up"></i></a>
+    <!-- Main Content -->
     <main>
+        <!-- About Section -->
         <section id="about" class="animate section">
             <h2>About Me</h2>
-            <p>Hello! I am a first-year Computer Science Engineering student at Amrita Vishwa Vidyapeetham, Chennai,
-                originally from
-                Ayyanthole, Kerala. I have a passion for programming and am proficient in Python, Java, and JavaScript.
-                When I'm not
-                immersed in coding, you can find me tinkering with devices, exploring the world of technology. I also
-                enjoy listening to
-                music and reading as hobbies. Traveling to various places and experiencing the beauty of nature is
-                something that truly
-                rejuvenates me. I am excited about my journey in the world of technology and look forward to exploring
-                new horizons in
-                the field of computer science.</p>
+            <p>Welcome! I'm a freshman pursuing a degree in Computer Science Engineering at Amrita Vishwa Vidyapeetham
+                in Chennai, although I originally hail from Ayyanthole, Kerala. Programming is my forte, and I have a
+                strong command of languages such as Python, Java, and JavaScript. When I'm not coding away, I love to
+                delve into the world of technology, tinker with gadgets, and explore the latest tech advancements.
+                Outside of my passion for all things tech, I find joy in music, reading, and traveling to new places to
+                soak up the wonders of nature. I'm thrilled to be on this journey in the ever-evolving world of
+                technology and am eager to push boundaries and uncover new possibilities within the field of computer
+                science.</p>
         </section>
+        <!-- Skills Section -->
         <section id="skills" class="animate section">
             <h2>Skills</h2>
             <div class="skills-category">
@@ -83,6 +96,7 @@
                 </div>
             </div>
         </section>
+        <!-- Projects Section -->
         <section id="projects" class="animate section">
             <h2>Projects</h2>
             <div class="project-container">
@@ -92,47 +106,42 @@
                         <img src="https://github.com/Tintin2310/FusionHackz24/blob/main/static/logo.png?raw=true"
                             alt="EtherVault Logo">
                         <h3>EtherVault</h3>
-                        <p>Tracking Ether made simple - EtherVault<br>
-                            A webpage for tracking your Ethereum balance and its value in real world currency.
-                        </p>
+                        <p>Tracking Ether made simple - EtherVault<br>A webpage for tracking your Ethereum balance and
+                            its value in real world currency.</p>
                     </div>
                 </a>
-                <br>
                 <!-- Project 2 -->
                 <a href="https://github.com/Tintin2310/HEREvolution-Codefest-BITS-Pilani">
                     <div class="project-card animate">
                         <img src="https://github.com/Tintin2310/HEREvolution-Codefest-BITS-Pilani/blob/main/Resources/logo.png?raw=true"
                             alt="Here&There Logo">
                         <h3>Here&There</h3>
-                        <p>A web application showcasing a platform for searching locations, viewing
-                            tourist attractions, and
-                            planning routes, utilizing geocoding, mapping technologies, and Firebase Authentication,
-                            currently with a database for
-                            Indian tourist places </p>
+                        <p>A web application showcasing a platform for searching locations, viewing tourist attractions,
+                            and planning routes, utilizing geocoding, mapping technologies, and Firebase
+                            Authentication, currently with a database for Indian tourist places</p>
                     </div>
                 </a>
-
-                <!-- Add as many project cards as needed -->
             </div>
         </section>
+        <!-- Contact Section -->
         <section id="contact" class="animate section contact-section">
             <h2>Contact Me</h2>
             <form action="/submit_form" method="post" class="contact-form">
                 <label for="name">Name:</label>
                 <input type="text" id="name" required />
-
                 <label for="email">Email:</label>
                 <input type="email" id="email" required />
-
                 <label for="message">Message:</label>
                 <textarea id="message" rows="5" required></textarea>
                 <button type="submit">Send Message</button>
             </form>
         </section>
     </main>
+    <!-- Footer -->
     <footer>
         &copy; Aryan Madhusudhanan 2024
     </footer>
+    <!-- JavaScript for Interactivity -->
     <script>
         // Function to toggle the visibility of the back-to-top link
         function toggleBackToTop() {
@@ -155,6 +164,48 @@
             event.preventDefault(); // Prevent the default action to stop the page from jumping
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
+
+        // Rotating Text Animation
+        let words = document.querySelectorAll(".word")
+        words.forEach(word => {
+            let letters = word.textContent.split("")
+            word.textContent = ""
+            letters.forEach(letter => {
+                let span = document.createElement("span")
+                span.textContent = letter
+                span.className = "letter"
+                word.append(span)
+            })
+        })
+
+        let currentWordIndex = 0
+        let maxWordIndex = words.length - 1
+        words[currentWordIndex].style.opacity = "1"
+
+        let rotateText = () => {
+            let currentWord = words[currentWordIndex]
+            let nextWord =
+                currentWordIndex === maxWordIndex ? words[0] : words[currentWordIndex + 1]
+            // rotate out letters of current word
+            Array.from(currentWord.children).forEach((letter, i) => {
+                setTimeout(() => {
+                    letter.className = "letter out"
+                }, i * 80)
+            })
+            // reveal and rotate in letters of next word
+            nextWord.style.opacity = "1"
+            Array.from(nextWord.children).forEach((letter, i) => {
+                letter.className = "letter behind"
+                setTimeout(() => {
+                    letter.className = "letter in"
+                }, 340 + i * 80)
+            })
+            currentWordIndex =
+                currentWordIndex === maxWordIndex ? 0 : currentWordIndex + 1
+        }
+
+        rotateText()
+        setInterval(rotateText, 4000)
     </script>
 </body>
 

@@ -12,14 +12,13 @@
     --accent-color-active: #A7C080
 }
 
+/* Scrollbar Styling */
 ::-webkit-scrollbar-thumb {
     width: 1vh;
-}
-
-::-webkit-scrollbar-thumb {
     background-color: var(--accent-color-active);
 }
 
+/* Global Styles */
 * {
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -35,6 +34,7 @@ body {
     padding: 0
 }
 
+/* Header Styling */
 header {
     background-color: var(--home-background-color);
     display: flex;
@@ -50,21 +50,25 @@ header h1 {
     color: var(--text-color);
     font-size: 4rem;
     line-height: 1.2;
+    margin-top: 0;
     margin-bottom: 0
 }
 
-header p {
+header p,
+header pre {
     color: var(--sub-text-color);
     font-size: 1.5rem;
     margin-top: 0
 }
 
+/* Social Icons */
 .social-icons a i {
     color: var(--text-color);
     font-size: 24px;
-    padding: 1vh;
+    padding: 2vh;
 }
 
+/* Main Content Styling */
 main {
     max-width: 960px;
     margin: 0 auto;
@@ -81,6 +85,7 @@ section h2 {
     margin-bottom: 1rem
 }
 
+/* Navigation Styling */
 nav {
     position: absolute;
     top: 0;
@@ -112,11 +117,59 @@ a:hover {
     opacity: 1
 }
 
+/* Profile Picture Styling */
 .profile-picture {
-    margin-top: 10vh;
+    margin-top: 15vh;
     border-radius: 50%;
 }
 
+.rotating-text {
+    font-weight: 600;
+    /* font-size: 36px; */
+    color: var(--text-color);
+    display: inline-flex;
+}
+
+.rotating-text p {
+    display: inline-flex;
+    margin: 0;
+    vertical-align: top;
+}
+
+.rotating-text p .word {
+    position: absolute;
+    display: inline-flex;
+    opacity: 0;
+}
+
+.rotating-text p .word .letter {
+    transform-origin: center center 25px;
+}
+
+.rotating-text p .word .letter.out {
+    transform: rotateX(90deg);
+    transition: 0.32s cubic-bezier(0.6, 0, 0.7, 0.2);
+}
+
+.rotating-text p .word .letter.in {
+    transition: 0.38s ease;
+}
+
+.rotating-text p .word .letter.behind {
+    transform: rotateX(-90deg);
+}
+
+/* Section Styling */
+.section {
+    padding: 2rem;
+    border-radius: 5px;
+    margin: 2rem 0;
+    background-color: var(--card-background-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+    color: var(--sub-text-color)
+}
+
+/* Project Card Styling */
 .section {
     padding: 2rem;
     border-radius: 5px;
@@ -182,6 +235,7 @@ footer {
     color: var(--text-color)
 }
 
+/* Responsive Design */
 @media screen and (max-width:768px) {
     .navbar {
         flex-direction: column;
@@ -205,6 +259,13 @@ footer {
 .animate:hover {
     transform: translateY(-5px);
     box-shadow: 0px 5px 10px var(--accent-color-active)
+}
+
+/* Contact Section Styling */
+.contact-section {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--card-background-color)
 }
 
 .contact-section {
@@ -252,6 +313,12 @@ footer {
     background-color: var(--accent-color-active)
 }
 
+/* Hidden Class */
+.d-none {
+    display: none
+}
+
+/* Back to Top Button Styling */
 .d-none {
     display: none
 }
@@ -276,6 +343,10 @@ footer {
     background-color: var(--accent-color-active);
     transform: scale(1);
     box-shadow: 0 4px 8px rgba(0, 0, 0, .4)
+}
+
+#back-to-top i {
+    vertical-align: middle
 }
 
 #back-to-top i {
