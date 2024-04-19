@@ -342,7 +342,7 @@ footer {
 #back-to-top:hover {
     background-color: var(--accent-color-active);
     transform: scale(1);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, .4)
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .4);
 }
 
 #back-to-top i {
