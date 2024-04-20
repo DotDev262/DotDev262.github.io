@@ -1,3 +1,42 @@
+// Function to toggle the theme
+function toggleTheme() {
+    const body = document.body;
+    const themeIcon = document.getElementById('theme-icon');
+    if (body.classList.contains('dark-theme')) {
+        body.classList.remove('dark-theme');
+        body.classList.add('light-theme');
+        localStorage.setItem('theme', 'light');
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+    } else {
+        body.classList.remove('light-theme');
+        body.classList.add('dark-theme');
+        localStorage.setItem('theme', 'dark');
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+    }
+}
+
+// Event listener for the theme switcher
+document.getElementById('theme-switcher').addEventListener('click', toggleTheme);
+
+// Function to set the theme based on user preference
+function setTheme() {
+    const theme = localStorage.getItem('theme') || 'light'; // Default to light theme
+    document.body.classList.add(theme + '-theme');
+    const themeIcon = document.getElementById('theme-icon');
+    if (theme === 'dark') {
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+    } else {
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+    }
+}
+
+// Call setTheme on page load
+setTheme();
+
 // Function to toggle the visibility of the back-to-top link
 function toggleBackToTop() {
     const backToTop = document.getElementById('back-to-top');

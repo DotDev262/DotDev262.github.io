@@ -1,4 +1,20 @@
-:root {
+/* Light Theme */
+body.light-theme {
+    --background-color: #efebd4;
+    --nav-background-color: #efebd4;
+    --home-background-color: #e6e2cc;
+    --card-background-color: #fdf6e3;
+    --text-input-background-color: #f4f0d9;
+    --skill-item-background-color: #f0f1d2;
+    --scroll-thumb-color: #7A8478;
+    --text-color: #232a2e;
+    --sub-text-color: #6c757d;
+    --accent-color: #9DA9A0;
+    --accent-color-active: #A7C080;
+}
+
+/* Dark Theme */
+body.dark-theme {
     --background-color: #232A2E;
     --nav-background-color: #3D484D;
     --home-background-color: #475258;
@@ -9,13 +25,7 @@
     --text-color: #D3C6AA;
     --sub-text-color: #7A8478;
     --accent-color: #9DA9A0;
-    --accent-color-active: #A7C080
-}
-
-/* Scrollbar Styling */
-::-webkit-scrollbar-thumb {
-    width: 1vh;
-    background-color: var(--accent-color-active);
+    --accent-color-active: #A7C080;
 }
 
 /* Global Styles */
@@ -27,11 +37,13 @@
 
 body {
     font-family: Arial, sans-serif;
+    background-color: var(--background-color);
     background-image: url(/assets/images/background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    color: var(--text-color);
     margin: 0;
-    padding: 0
+    padding: 0;
 }
 
 /* Header Styling */
