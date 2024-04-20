@@ -109,8 +109,8 @@ function validateForm(event) {
     var message = document.getElementById("message").value;
     var subject = document.getElementById("subject").value; // Get the subject from the form
 
-    // Construct the mailto: link with the subject
-    var mailtoLink = "mailto:?subject=" + encodeURIComponent(subject) + "&body=Name: " + encodeURIComponent(name) + "%0D%0AEmail: " + encodeURIComponent(email) + "%0D%0AMessage: " + encodeURIComponent(message);
+    // Construct the mailto: link with the specified email address
+    var mailtoLink = "mailto:ch.sc.u4cse23207@ch.students.amrita.edu?subject=" + encodeURIComponent(subject) + "&body=Name: " + encodeURIComponent(name) + "%0D%0AEmail: " + encodeURIComponent(email) + "%0D%0AMessage: " + encodeURIComponent(message);
 
     // Create a temporary form element
     var tempForm = document.createElement('form');
